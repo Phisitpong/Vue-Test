@@ -11,6 +11,7 @@
         </div>
       </div>
     </div>
+    
   </div>
   <modal
     v-if="state.isShowModal"
@@ -23,7 +24,9 @@
       <h3>custom header</h3>
     </template>
   </modal>
-  <vCarousel></vCarousel>
+
+
+  
 </template>
 
 
@@ -31,12 +34,10 @@
 <script>
 import { defineComponent, reactive } from "vue";
 import Modal from "../components/Modal";
-import VCarousel from "../components/VueSlickCarousel";
 export default defineComponent({
   name: "Gallery",
   components: {
     Modal,
-    VCarousel
   },
   setup() {
     const state = reactive({
