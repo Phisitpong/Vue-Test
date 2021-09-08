@@ -1,6 +1,7 @@
 <template>
   <div class="gallery">
     <div class="container">
+      
       <h1>This is an gallery page</h1>
       <div class="grid-container">
         <div v-for="item in state.listImage" v-bind:key="item" class="grid-item">
@@ -11,7 +12,7 @@
         </div>
       </div>
     </div>
-    
+    <VueCarousel />
   </div>
   <modal
     v-if="state.isShowModal"
@@ -34,10 +35,12 @@
 <script>
 import { defineComponent, reactive } from "vue";
 import Modal from "../components/Modal";
+import VueCarousel from "../components/VueCarousel";
 export default defineComponent({
   name: "Gallery",
   components: {
     Modal,
+    VueCarousel
   },
   setup() {
     const state = reactive({
