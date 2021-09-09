@@ -5,13 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="StyleSheet" href="./style.css">
+    <link rel="StyleSheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="StyleSheet" href="./fontawesome/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <script src="https://unpkg.com/vue-gallery-slideshow"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div>
+      <div id="app"></div>
+      <!-- built files will be auto injected -->
+      
+      <footer id="myFooter">
+        <div class="footerBar">
+          <div class="container">
+            <p>Author: Phisitpong Imjinda<br>
+              <a href="mailto:James_ksj@hotmail.com" style="color: white;">James_ksj@hotmail.com</a></p>
+            </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
+
+<style>
+
+  #myFooter{
+    margin-top: 1rem;
+  }
+  .footerBar {
+    color: white;
+    text-align: center;
+    background-color: #33373e;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+  .footerBar p {
+    margin-top: 1rem;
+  }
+  </style>
