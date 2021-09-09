@@ -48,7 +48,7 @@
   .avatarImg {
     height: 200px;
     border-radius: 50%;
-        margin-bottom: 2rem;
+    margin-bottom: 2rem;
     margin-Top: 2rem;
   }
   .font-container {

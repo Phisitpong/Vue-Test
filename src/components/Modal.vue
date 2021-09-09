@@ -4,7 +4,7 @@
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
-            <slot name="header"> Picture </slot>
+            <slot name="header"></slot>
           </div>
 
           <div class="modal-body">

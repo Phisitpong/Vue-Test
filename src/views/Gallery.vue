@@ -2,15 +2,15 @@
   <div class="gallery">
     <div class="container">
       
-      <h1>This is an gallery page</h1>
+      <!-- <h1>This is an gallery page</h1> -->
       <div class="grid-container">
         <div v-for="item in state.listImage" v-bind:key="item" class="grid-item">
           <div @click="onSelect(item.id, item.path)">
-            <img alt="Vue logo"  :src="item.path" />
+            <img alt="Vue logo" class="imgfruit" :src="item.path" />
             <!-- <img :src="require(`../assets/Fruits_Pic/fruit-01.jpg`)" /> -->
           </div>
         </div>
-       <VueCarousel :Pagination="5" />
+       
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
     :imgPath="state.imgPath"
   >
     <template v-slot:header>
-      <h3>custom header</h3>
+      <!-- <h3>custom header</h3> -->
     </template>
   </modal>
 </template>
@@ -30,13 +30,12 @@
 <script>
 import { defineComponent, reactive } from "vue";
 import Modal from "../components/Modal";
-import VueCarousel from "../components/VueCarousel";
 
 export default defineComponent({
   name: "Gallery",
   components: {
     Modal,
-    VueCarousel
+    
   },
   
   

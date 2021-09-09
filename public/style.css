@@ -67,6 +67,13 @@
     width: 300px;
     height: 200px;
   }
+  .imgfruit {
+    border: 1px solid #fff;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+  }
   .container {
     display: flex;
     flex-direction: column;
