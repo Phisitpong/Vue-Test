@@ -4,17 +4,18 @@
       
       <h1>This is an gallery page</h1>
       <div class="grid-container">
-        <div v-for="item in state.listImage" v-bind:key="item" class="grid-item">
+        <!-- <div v-for="item in state.listImage" v-bind:key="item" class="grid-item">
           <div @click="onSelect(item.id, item.path)">
             <img alt="Vue logo"  :src="item.path" />
-            <!-- <img :src="require(`../assets/Fruits_Pic/fruit-01.jpg`)" /> -->
+            <img :src="require(`../assets/Fruits_Pic/fruit-01.jpg`)" />
           </div>
-        </div>
+        </div> -->
+        <img class="image" v-for="(image, i) in images" :src="images[i]" :key="i" @click="index = i">
+        <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
       </div>
     </div>
-    <VueCarousel />
   </div>
-  <modal
+  <!-- <modal
     v-if="state.isShowModal"
     @close="state.isShowModal = false"
     @back="back(state.imgID)"
@@ -24,29 +25,48 @@
     <template v-slot:header>
       <h3>custom header</h3>
     </template>
-  </modal>
-
-
-  
+  </modal> -->
 </template>
-
-
 
 <script>
 import { defineComponent, reactive } from "vue";
-import Modal from "../components/Modal";
-import VueCarousel from "../components/VueCarousel";
+// import Modal from "../components/Modal";
+
+
+
 export default defineComponent({
   name: "Gallery",
   components: {
-    Modal,
-    VueCarousel
+    // Modal,
+    
+  },
+  
+  data() {
+    return{
+      images:[
+        '../assets/Fruits_Pic/fruit-01.jpg',
+        '../assets/Fruits_Pic/fruit-02.jpg',
+        '../assets/Fruits_Pic/fruit-03.jpg',
+        '../assets/Fruits_Pic/fruit-04.jpg',
+        '../assets/Fruits_Pic/fruit-05.jpg',
+        '../assets/Fruits_Pic/fruit-06.jpg',
+        '../assets/Fruits_Pic/fruit-07.jpg',
+        '../assets/Fruits_Pic/fruit-08.jpg',
+        '../assets/Fruits_Pic/fruit-09.jpg',
+          '../assets/Fruits_Pic/fruit-10.jpg',
+          '../assets/Fruits_Pic/fruit-11.jpg',
+          '../assets/Fruits_Pic/fruit-12.jpg'
+      ],
+      index: null
+
+    }
   },
   setup() {
     const state = reactive({
       isShowModal: false,
       imgID: null,
       imgPath: null,
+      
       listImage: [
         { id: 1, path: require("../assets/Fruits_Pic/fruit-01.jpg") },
         { id: 2, path: require("../assets/Fruits_Pic/fruit-02.jpg") },
@@ -60,8 +80,10 @@ export default defineComponent({
         { id: 10, path: require("../assets/Fruits_Pic/fruit-10.jpg") },
         { id: 11, path: require("../assets/Fruits_Pic/fruit-11.jpg") },
         { id: 12, path: require("../assets/Fruits_Pic/fruit-12.jpg") },
-      ]
-    });
+      ],
+      
+
+      });
 
     function onSelect(index, path) {
       state.imgID = index;

@@ -1,12 +1,12 @@
 <template>
   <div class="profile">
-    <div>
+    
 		<div class="container font-container">
       <div class="row">
           <img src="../assets/avatar/Pic.jpg" class="avatarImg">
       </div>
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading"  style="width: auto;">
+				<div class="col-md-8 col-md-offset-2 text-center heading"  style="width: auto;">
 					<h2>About Me</h2>
 				</div>
 			</div>
@@ -14,10 +14,9 @@
 				<div class="col-md-4">
 					<ul class="info">
 						<li><span class="first-block">Full Name:</span><span class="second-block">Phisitpong Imjinda</span></li>
-                        <li><span class="first-block">Nick Name:</span><span class="second-block">James</span></li>
+            <li><span class="first-block">Nick Name:</span><span class="second-block">James</span></li>
 						<li><span class="first-block">Phone:</span><span class="second-block">091-8959249</span></li>
 						<li><span class="first-block">Email:</span><span class="second-block">James_ksj@hotmail.com</span></li>
-
 						<!--<li><span class="first-block">Website:</span><span class="second-block">www.yoursite.com</span></li>-->
 						<li><span class="first-block">Address:</span><span class="second-block">Si Ayutthaya 7, Thung Phaya Thai, Khet Ratchathewi, Bangkok, 10400</span></li>
 					</ul>
@@ -25,15 +24,14 @@
 				<div class="col-md-8">
 					<h2>Hello </h2>
 					<p>I'm open-minded and I'd love learning new things. I like team work and always have new ideas. I can learn anything fast and be loyal to corporate culture. I'm flexible person to adjust myself in difficult situation.</p>
-
-                    <h3>Career Objective </h3>
+          <h3>Career Objective </h3>
 					<p>I'd like to challenge myself to develop my skills and I want to succeed in a stimulating and challenging environment where will provide me with advancement opportunities that I can grow professionally and personally.</p>
 					
 				</div>
 			</div>
 		</div>
 	</div>
-  </div>
+  
 </template>
 <script>
 </script>
@@ -61,10 +59,10 @@
     color: #4d4d4d;
     background: #fff;
   }
-  .fh5co-heading {
+  .heading {
     margin-bottom: 5em;
   }
-  .fh5co-heading h2 {
+  .heading h2 {
     font-size: 40px;
     margin-bottom: 20px;
     line-height: 1.5;
