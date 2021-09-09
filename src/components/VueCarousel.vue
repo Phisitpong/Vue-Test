@@ -1,30 +1,46 @@
 <template>
-  <div>
-    <VueSlickCarousel v-bind="settings">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-    </VueSlickCarousel>
-  </div>
+  <Carousel :itemsToShow="3.95" :wrapAround="true">
+    <Slide v-for="slide in 10" :key="slide">
+      <div class="carousel__item">{{ slide }}</div>
+    </Slide>
+
+    ...
+  </Carousel>
 </template>
 
 <script>
-  import VueSlickCarousel from 'vue-slick-carousel'
-  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
-  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import { defineComponent } from 'vue'
+import { Carousel, Pagination, Slide } from 'vue3-carousel';
 
-  export default {
-    name: 'MyComponent',
-    components: { VueSlickCarousel },
-    data() {
-      return {
-        settings: {
-          arrows: true,
-          dots: true,
-        },
-      }
-    }
-  }
+import 'vue3-carousel/dist/carousel.css';
+
+export default defineComponent({
+  name: 'Autoplay',
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+  },
+});
 </script>
+
+<style scoped>
+.carousel__slide > .carousel__item {
+  transform: scale(1);
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.carousel__slide--visible > .carousel__item {
+  opacity: 1;
+  transform: rotateY(0);
+}
+.carousel__slide--next > .carousel__item {
+  transform: scale(0.9) translate(-10px);
+}
+.carousel__slide--prev > .carousel__item {
+  transform: scale(0.9) translate(10px);
+}
+.carousel__slide--active > .carousel__item {
+  transform: scale(1.1);
+}
+</style>
